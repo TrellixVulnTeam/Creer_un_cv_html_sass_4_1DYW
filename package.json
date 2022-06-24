@@ -1,0 +1,23 @@
+{
+  "name": "creer_un_cv_html_sass_4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrTenza/Creer_un_cv_html_sass_4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrTenza/Creer_un_cv_html_sass_4/issues"
+  },
+  "homepage": "https://github.com/MrTenza/Creer_un_cv_html_sass_4#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "sass": "^1.52.3"
+  }
+}
