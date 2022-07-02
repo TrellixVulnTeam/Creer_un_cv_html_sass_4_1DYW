@@ -93,11 +93,20 @@ img {
     transform: rotate(0deg);
   }
 }
+/* Landscape téléphone et inférieur */
+/* Landscape téléphone et  portrait tablette */
+/* Portrait tablette et landscape ordinateur */
+/* ordianteur large */
 /***** GÉNERAL *****/
 .grid-container {
   display: grid;
   grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px auto;
   min-height: 100vh;
+}
+@media (max-width: 480px) {
+  .grid-container {
+    grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto/auto;
+  }
 }
 
 /***** HEADER *****/
@@ -112,11 +121,21 @@ header {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 480px) {
+  header {
+    padding: 3rem 2rem;
+  }
+}
 header h1 {
   font-size: 6rem;
   line-height: 8rem;
   font-weight: 300;
-  letter-spacing: 2rem;
+  letter-spacing: 3rem;
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
 }
 header p {
   letter-spacing: 0.5rem;
@@ -225,6 +244,11 @@ main {
   padding: 5rem;
   /***** EXPERIENCES PROS *****/
 }
+@media (max-width: 480px) {
+  main {
+    padding: 5rem 1.5rem;
+  }
+}
 main h2 {
   margin-bottom: 4rem;
 }
@@ -272,6 +296,11 @@ footer {
   padding: 5rem;
   background: var(--text);
 }
+@media (max-width: 480px) {
+  footer {
+    padding: 5rem 1.5rem;
+  }
+}
 footer h2 {
   margin-bottom: 3rem;
 }
@@ -310,6 +339,11 @@ footer form input {
   min-width: 400px;
   padding: 1rem 2rem;
   line-height: 2rem;
+}
+@media (max-width: 480px) {
+  footer form input {
+    min-width: 200px;
+  }
 }
 footer form input::placeholder {
   color: var(--text);

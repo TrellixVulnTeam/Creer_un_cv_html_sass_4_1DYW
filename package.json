@@ -18,6 +18,6 @@
   "homepage": "https://github.com/MrTenza/Creer_un_cv_html_sass_4#readme",
   "dependencies": {
     "node-sass": "^7.0.1",
-    "sass": "^1.52.3"
+    "sass": "^1.53.0"
   }
 }

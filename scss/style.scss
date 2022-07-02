@@ -5,17 +5,24 @@
 @import "./variables.scss";
 @import "./classes";
 @import "./animation";
-
-
+@import "./media-queries";
 
 /***** GÉNERAL *****/
 .grid-container {
   display: grid;
-  grid:
-    "picture header" auto "aside main" 1fr "footer footer" auto / 350px auto;
+  grid: "picture header" auto "aside main" 1fr "footer footer" auto / 350px auto;
   min-height: 100vh;
-}
 
+  @include xs {
+    grid:
+      "header" auto
+      "main" auto
+      "picture" auto
+      "aside" auto
+      "footer" auto
+      / auto;
+  }
+}
 
 /***** HEADER *****/
 header {
@@ -29,11 +36,19 @@ header {
   justify-content: center;
   align-items: center;
 
+  @include xs {
+    padding: 3rem 2rem;
+  }
+
   h1 {
     font-size: 6rem;
     line-height: 8rem;
     font-weight: 300;
-    letter-spacing: 2rem;
+    letter-spacing: 3rem;
+
+    @include xs {
+      font-size: 2rem;
+    }
   }
 
   p {
@@ -158,6 +173,10 @@ main {
   grid-area: main;
   padding: 5rem;
 
+  @include xs {
+    padding: 5rem 1.5rem;
+  }
+
   h2 {
     margin-bottom: 4rem;
   }
@@ -199,7 +218,6 @@ main {
         list-style: circle;
         padding-left: 4rem;
       }
-
     }
   }
 }
@@ -216,6 +234,10 @@ footer {
   padding: 5rem;
   background: var(--text);
 
+  @include xs {
+    padding: 5rem 1.5rem;
+  }
+
   h2 {
     margin-bottom: 3rem;
   }
@@ -231,7 +253,6 @@ footer {
       font-size: 2rem;
       border-top-left-radius: 0.5rem;
       border-bottom-left-radius: 0.5rem;
-
     }
 
     button {
@@ -261,6 +282,9 @@ footer {
       padding: 1rem 2rem;
       line-height: 2rem;
 
+      @include xs {
+        min-width: 200px;
+      }
       &::placeholder {
         color: var(--text);
       }
